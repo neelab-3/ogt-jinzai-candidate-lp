@@ -1,0 +1,1069 @@
+/* Strategic CSS Framework - Master Designer 6 */
+/* McKinsey-level Analytical Design Language */
+
+:root {
+    /* Authentic Premium Color Palette */
+    --pure-white: #ffffff;
+    --warm-white: #fafafa;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --border-gray: #d0d0d0;
+    --text-primary: #2c2c2c;
+    --text-secondary: #666666;
+    --text-light: #999999;
+    --subtle-accent: #0066cc;
+    --success-green: #2e7d32;
+
+    /* Typography Scale */
+    --font-primary: 'Crimson Text', serif;
+    --font-secondary: 'Inter', sans-serif;
+
+    /* Spacing System */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-xxl: 4rem;
+
+    /* Analytical Shadows */
+    --shadow-strategic: 0 8px 32px rgba(26, 35, 50, 0.1);
+    --shadow-elevated: 0 16px 48px rgba(26, 35, 50, 0.15);
+    --shadow-framework: 0 4px 16px rgba(26, 35, 50, 0.08);
+}
+
+/* Base Reset & Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--pure-white);
+    font-size: 16px;
+}
+
+/* Strategic Typography Hierarchy */
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--text-primary);
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--text-primary);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    color: var(--subtle-accent);
+}
+
+p {
+    margin-bottom: var(--space-sm);
+    line-height: 1.7;
+}
+
+/* Container System */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* Strategic Navigation */
+.strategic-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.tagline {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-secondary);
+}
+
+.strategic-cta-nav {
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.strategic-cta-nav:hover {
+    background: var(--light-gray);
+    transform: translateY(-1px);
+}
+
+/* Hero Section - Strategic Positioning */
+.hero-strategic {
+    background: var(--warm-white);
+    color: var(--white);
+    padding: 120px 0 var(--space-xxl);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-strategic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    position: relative;
+    z-index: 2;
+}
+
+.strategic-content {
+    max-width: 800px;
+}
+
+.strategic-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    background: rgba(212, 175, 55, 0.2);
+    border: 1px solid var(--medium-gray);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 20px;
+    margin-bottom: var(--space-lg);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.strategic-headline {
+    margin-bottom: var(--space-lg);
+}
+
+.highlight-strategic {
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.value-proposition {
+    margin-bottom: var(--space-xl);
+}
+
+.strategic-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Strategic Metrics */
+.strategic-metrics {
+    display: flex;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.metric-item {
+    text-align: center;
+}
+
+.metric-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-family: var(--font-secondary);
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* CTA Groups */
+.cta-strategic-group {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.cta-primary,
+.cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.cta-primary {
+    background: var(--text-primary);
+    color: var(--text-primary);
+}
+
+.cta-primary:hover {
+    background: var(--light-gray);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strategic);
+}
+
+.cta-secondary {
+    background: transparent;
+    color: var(--pure-white);
+    border: 2px solid var(--pure-white);
+}
+
+.cta-secondary:hover {
+    background: var(--pure-white);
+    color: var(--text-primary);
+}
+
+/* Mission & Vision - Strategic Foundation */
+.mission-strategic {
+    padding: var(--space-xxl) 0;
+    background: var(--light-gray);
+}
+
+.strategic-framework {
+    text-align: center;
+}
+
+.framework-header {
+    margin-bottom: var(--space-xl);
+}
+
+.framework-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.foundation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.foundation-item {
+    background: var(--pure-white);
+    padding: var(--space-xl);
+    border-radius: 8px;
+    box-shadow: var(--shadow-framework);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.foundation-item:hover {
+    transform: translateY(-4px);
+}
+
+.foundation-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-lg);
+    background: var(--light-gray);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--subtle-accent);
+}
+
+.foundation-item h4 {
+    color: var(--text-secondary);
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    margin-bottom: var(--space-sm);
+}
+
+/* Strategic Market Segments */
+.segments-strategic {
+    padding: var(--space-xxl) 0;
+    background: var(--pure-white);
+}
+
+.segment-analysis {
+    text-align: center;
+}
+
+.analysis-header {
+    margin-bottom: var(--space-xl);
+}
+
+.analysis-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.segments-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.segment-card {
+    background: var(--pure-white);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.segment-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--text-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.segment-card:hover {
+    border-color: var(--text-secondary);
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-4px);
+}
+
+.segment-card:hover::before {
+    transform: scaleX(1);
+}
+
+.segment-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.segment-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--light-gray);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.segment-title h3 {
+    margin-bottom: 0.25rem;
+}
+
+.segment-title p {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.segment-metrics {
+    display: flex;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    justify-content: center;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.metric-unit {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.segment-framework {
+    text-align: left;
+}
+
+.segment-framework h4 {
+    font-size: 1rem;
+    color: var(--subtle-accent);
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-secondary);
+}
+
+.segment-framework ul {
+    list-style: none;
+    padding: 0;
+}
+
+.segment-framework li {
+    padding: 0.25rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--charcoal);
+}
+
+.segment-framework li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--text-secondary);
+    font-size: 0.7rem;
+}
+
+/* Strategic Value Architecture */
+.value-strategic {
+    padding: var(--space-xxl) 0;
+    background: var(--light-gray);
+}
+
+.value-framework {
+    text-align: center;
+}
+
+.framework-intro {
+    margin-bottom: var(--space-xl);
+}
+
+.value-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.value-matrix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.value-pillar {
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-framework);
+    position: relative;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.value-pillar:hover {
+    transform: translateY(-4px);
+}
+
+.pillar-number {
+    position: absolute;
+    top: -10px;
+    left: var(--space-lg);
+    background: var(--text-primary);
+    color: var(--pure-white);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.pillar-content {
+    padding-top: var(--space-sm);
+}
+
+.pillar-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--light-gray);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: var(--space-md);
+}
+
+.pillar-content h3 {
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+}
+
+.pillar-content p {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+}
+
+.framework-tag {
+    display: inline-block;
+    background: var(--light-gray);
+    color: var(--text-primary);
+    padding: 0.25rem var(--space-sm);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Strategic Process Methodology */
+.methodology-strategic {
+    padding: var(--space-xxl) 0;
+    background: var(--pure-white);
+}
+
+.methodology-framework {
+    text-align: center;
+}
+
+.methodology-header {
+    margin-bottom: var(--space-xl);
+}
+
+.methodology-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.process-flow {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.process-phase {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.process-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.phase-indicator {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.phase-number {
+    background: var(--strategic-blue);
+    color: var(--white);
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: var(--space-xs);
+}
+
+.phase-duration {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.phase-content {
+    background: var(--pure-white);
+    border: 2px solid var(--border-gray);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    text-align: left;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.phase-content:hover {
+    border-color: var(--text-secondary);
+    box-shadow: var(--shadow-framework);
+}
+
+.phase-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--light-gray);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: var(--space-md);
+}
+
+.phase-content h3 {
+    margin-bottom: var(--space-sm);
+    font-size: 1.1rem;
+}
+
+.phase-content p {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-md);
+}
+
+.phase-deliverables h4 {
+    font-size: 0.9rem;
+    color: var(--subtle-accent);
+    margin-bottom: var(--space-sm);
+    font-family: var(--font-secondary);
+}
+
+.phase-deliverables ul {
+    list-style: none;
+    padding: 0;
+}
+
+.phase-deliverables li {
+    padding: 0.25rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.85rem;
+    color: var(--charcoal);
+}
+
+.phase-deliverables li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+/* Executive Assessment */
+.assessment-strategic {
+    padding: var(--space-xxl) 0;
+    background: var(--warm-white);
+    color: var(--white);
+}
+
+.assessment-framework {
+    text-align: center;
+}
+
+.assessment-header {
+    margin-bottom: var(--space-xl);
+}
+
+.assessment-header h2 {
+    color: var(--white);
+}
+
+.assessment-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.assessment-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.assessment-category {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    text-align: left;
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--light-gray);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--subtle-accent);
+    margin-bottom: var(--space-md);
+}
+
+.assessment-category h3 {
+    color: var(--white);
+    margin-bottom: var(--space-md);
+}
+
+.assessment-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.metric-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.metric-progress {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--text-primary);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.assessment-cta {
+    margin-top: var(--space-xl);
+}
+
+.cta-assessment {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    border: 1px solid var(--text-primary);
+    color: var(--text-primary);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta-assessment:hover {
+    background: var(--light-gray);
+    transform: translateY(-2px);
+}
+
+/* Final CTA Section */
+.final-strategic {
+    padding: var(--space-xxl) 0;
+    background: var(--light-gray);
+}
+
+.final-framework {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-content h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.final-message {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+    line-height: 1.8;
+}
+
+.final-value-props {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.value-prop {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.9rem;
+    color: var(--subtle-accent);
+    font-weight: 500;
+}
+
+.value-prop i {
+    color: var(--text-secondary);
+}
+
+.final-cta-group {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-primary-final,
+.cta-secondary-final {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.cta-primary-final {
+    background: var(--strategic-blue);
+    color: var(--white);
+}
+
+.cta-primary-final:hover {
+    background: var(--primary-navy);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strategic);
+}
+
+.cta-secondary-final {
+    background: transparent;
+    color: var(--subtle-accent);
+    border: 2px solid var(--strategic-blue);
+}
+
+.cta-secondary-final:hover {
+    background: var(--strategic-blue);
+    color: var(--white);
+}
+
+/* Strategic Footer */
+.strategic-footer {
+    background: var(--primary-navy);
+    color: var(--white);
+    padding: var(--space-xxl) 0 var(--space-lg);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-secondary);
+}
+
+.company-info p {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: var(--space-xs);
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--text-secondary);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    padding-top: var(--space-lg);
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .strategic-metrics {
+        justify-content: center;
+    }
+
+    .process-flow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .process-arrow {
+        transform: rotate(90deg);
+        margin: var(--space-sm) 0;
+    }
+
+    .segments-matrix {
+        grid-template-columns: 1fr;
+    }
+
+    .value-matrix {
+        grid-template-columns: 1fr;
+    }
+
+    .final-value-props {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .final-cta-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-strategic {
+        padding: 100px 0 var(--space-lg);
+    }
+
+    .cta-strategic-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .strategic-metrics {
+        gap: var(--space-md);
+    }
+
+    .metric-item {
+        flex: 1;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus States */
+a:focus,
+button:focus {
+    outline: 2px solid var(--strategic-gold);
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-navy: #000000;
+        --strategic-blue: #0066cc;
+        --charcoal: #000000;
+        --strategic-gold: #ff9900;
+    }
+}
