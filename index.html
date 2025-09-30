@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OGT! 人才 - デザイン確認ページ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>OGT! 人才 - Design Index</title>
     <style>
         * {
             margin: 0;
@@ -13,111 +12,105 @@
         }
 
         body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background: #fafafa;
-            color: #2c2c2c;
-            line-height: 1.6;
-            padding: 40px 20px;
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2845 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
         }
 
         header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 4rem;
         }
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 300;
+            font-size: 3rem;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: #2c2c2c;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
-            font-size: 1.125rem;
-            color: #666666;
+            font-size: 1.2rem;
+            color: #c9a872;
             font-weight: 300;
         }
 
-        .designs-grid {
+        .design-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
         }
 
         .design-card {
-            background: #ffffff;
-            border: 1px solid #d0d0d0;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
             transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
+            backdrop-filter: blur(10px);
         }
 
         .design-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-color: #0066cc;
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #c9a872;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .design-number {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background: #f5f5f5;
-            border-radius: 50%;
-            line-height: 60px;
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #0066cc;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #c9a872;
+            margin-bottom: 1rem;
+            line-height: 1;
         }
 
         .design-title {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 10px;
-            color: #2c2c2c;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .design-description {
-            font-size: 0.95rem;
-            color: #666666;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
             line-height: 1.6;
-            margin-bottom: 20px;
         }
 
-        .view-button {
+        .design-link {
             display: inline-block;
-            padding: 10px 25px;
-            background: transparent;
-            color: #0066cc;
-            border: 1px solid #0066cc;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            font-weight: 500;
+            padding: 0.75rem 2rem;
+            background-color: #c9a872;
+            color: #0a1628;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
 
-        .design-card:hover .view-button {
-            background: #0066cc;
-            color: #ffffff;
+        .design-link:hover {
+            background-color: #d4b574;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(201, 168, 114, 0.3);
         }
 
         footer {
             text-align: center;
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid #d0d0d0;
-            color: #666666;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
             font-size: 0.9rem;
         }
 
@@ -126,7 +119,7 @@
                 font-size: 2rem;
             }
 
-            .designs-grid {
+            .design-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -136,55 +129,42 @@
     <div class="container">
         <header>
             <h1>OGT! 人才</h1>
-            <p class="subtitle">ランディングページデザイン確認</p>
+            <p class="subtitle">Landing Page Design Variations</p>
         </header>
 
-        <div class="designs-grid">
-            <a href="master-designer-1/index.html" class="design-card">
-                <div class="design-number">1</div>
-                <h2 class="design-title">デザイン 1</h2>
-                <p class="design-description">クラシックなエグゼクティブ向けデザイン。落ち着いた配色とシンプルなレイアウトで信頼感を演出。</p>
-                <span class="view-button">デザインを確認</span>
-            </a>
+        <main>
+            <div class="design-grid">
+                <div class="design-card">
+                    <div class="design-number">01</div>
+                    <h2 class="design-title">Designer 1</h2>
+                    <p class="design-description">
+                        エレガントでプロフェッショナルなデザイン。洗練されたレイアウトと高級感のあるビジュアルを特徴としています。
+                    </p>
+                    <a href="designer-1/" class="design-link">デザインを見る →</a>
+                </div>
 
-            <a href="master-designer-2/index.html" class="design-card">
-                <div class="design-number">2</div>
-                <h2 class="design-title">デザイン 2</h2>
-                <p class="design-description">プロフェッショナル重視のデザイン。体系的な情報構造と洗練されたビジュアルが特徴。</p>
-                <span class="view-button">デザインを確認</span>
-            </a>
+                <div class="design-card">
+                    <div class="design-number">02</div>
+                    <h2 class="design-title">Designer 2</h2>
+                    <p class="design-description">
+                        モダンで視覚的にインパクトのあるデザイン。大胆なタイポグラフィと効果的なビジュアルヒエラルキーが特徴です。
+                    </p>
+                    <a href="designer-2/" class="design-link">デザインを見る →</a>
+                </div>
 
-            <a href="master-designer-3/index.html" class="design-card">
-                <div class="design-number">3</div>
-                <h2 class="design-title">デザイン 3</h2>
-                <p class="design-description">モダンなアプローチのデザイン。視覚的な魅力と使いやすさのバランスを重視。</p>
-                <span class="view-button">デザインを確認</span>
-            </a>
-
-            <a href="master-designer-4/index.html" class="design-card">
-                <div class="design-number">4</div>
-                <h2 class="design-title">デザイン 4</h2>
-                <p class="design-description">プレミアム感を強調したデザイン。高級感のある配色とレイアウトが特徴。</p>
-                <span class="view-button">デザインを確認</span>
-            </a>
-
-            <a href="master-designer-5/index.html" class="design-card">
-                <div class="design-number">5</div>
-                <h2 class="design-title">デザイン 5</h2>
-                <p class="design-description">戦略的なストーリーテリングを重視したデザイン。長期的なキャリア支援を強調。</p>
-                <span class="view-button">デザインを確認</span>
-            </a>
-
-            <a href="master-designer-6/index.html" class="design-card">
-                <div class="design-number">6</div>
-                <h2 class="design-title">デザイン 6</h2>
-                <p class="design-description">分析的なアプローチのデザイン。データドリブンな印象と明確な価値提案が特徴。</p>
-                <span class="view-button">デザインを確認</span>
-            </a>
-        </div>
+                <div class="design-card">
+                    <div class="design-number">03</div>
+                    <h2 class="design-title">Designer 3</h2>
+                    <p class="design-description">
+                        クラシックで信頼感のあるデザイン。伝統的なレイアウトと分かりやすい情報設計が特徴です。
+                    </p>
+                    <a href="designer-3/" class="design-link">デザインを見る →</a>
+                </div>
+            </div>
+        </main>
 
         <footer>
-            <p>&copy; 2024 OGT! 人才. All rights reserved.</p>
+            <p>&copy; 2024 OGT! 人才. All Rights Reserved.</p>
         </footer>
     </div>
 </body>
